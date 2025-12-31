@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 vector<int>V[1005];
-bool vis[1005];
+bool vis[1005]; 
 void bfs(int src,int des)
 {
     queue<pair<int,int>>Q;
