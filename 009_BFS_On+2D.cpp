@@ -6,6 +6,7 @@ vector<pair<int,int>>D={{0, 1}, {0,-1}, {-1,0}, {1,0}};
 int N,M;
 char A[20][20];
 bool valid(int i,int j)
+
 {
     if(i<0 || i>=N || j<0 || j>=M)
         return false;
