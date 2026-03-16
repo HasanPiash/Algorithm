@@ -10,6 +10,7 @@ void bfs(int s)
     queue<int>q;
     q.push(s);
     vis[s]=true;
+    
     while(!q.empty())
     {
         int parent=q.front();
@@ -29,10 +30,12 @@ void bfs(int s)
         }
     }
 }
+
 int main()
 {
     int n,e;
     cin>>n>>e;
+    
     while(e--)
     {
         int a,b;
@@ -43,6 +46,7 @@ int main()
     memset(vis,false,sizeof(vis));
     memset(parentArray,-1,sizeof(parentArray));
     ans=false;
+    
     for(int i=0; i<n; i++)
     {
         if(!vis[i])
@@ -58,5 +62,6 @@ int main()
     {
         cout<<"Cycle not found";
     }
+    
     return 0;
 }
