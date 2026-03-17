@@ -14,6 +14,7 @@ void dfs(int parent)
         {
             ans=true;
         }
+        
         if(vis[child]==false)
         {
             parentArray[child]=parent;
@@ -25,6 +26,7 @@ int main()
 {
     int n,e;
     cin>>n>>e;
+    
     while(e--)
     {
         int a,b;
@@ -35,6 +37,7 @@ int main()
     memset(vis,false,sizeof(vis));
     memset(parentArray,-1,sizeof(parentArray));
     ans=false;
+    
     for(int i=0; i<n; i++)
     {
         if(!vis[i])
