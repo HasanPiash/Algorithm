@@ -8,6 +8,7 @@ void dijkstra(int src)
     queue<pair<int,int>>q;
     q.push({src,0});
     dis[src]=0;
+    
     while(!q.empty())
     {
         pair<int,int>parent=q.front();
@@ -26,10 +27,12 @@ void dijkstra(int src)
         }
     }
 }
+
 int main()
 {
     int n,e;
     cin>>n>>e;
+    
     while(e--)
     {
         int a,b,c;
@@ -37,10 +40,12 @@ int main()
         v[a].push_back({b,c});
         v[b].push_back({a,c});
     }
+    
     for(int i=0; i<n; i++)
     {
         dis[i]=INT_MAX;
     }
+    
     dijkstra(0);
     for(int i=0; i<n; i++)
     {
