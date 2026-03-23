@@ -18,10 +18,12 @@ public:
     {
         vis[si][sj]=true;
         ans++;
+        
         for(int i=0; i<4; i++)
         {
             int ci=si+d[i].first;
             int cj=sj+d[i].second;
+            
             if(valid(ci,cj) && !vis[ci][cj] && grid[ci][cj]==1)
             {
                 dfs(ci,cj,grid);
@@ -34,6 +36,7 @@ public:
         n=grid.size();
         m=grid[0].size();
         int mx=0;
+        
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<m; j++)
@@ -46,6 +49,7 @@ public:
                 }
             }
         }
+        
         return mx;
     }
 };
