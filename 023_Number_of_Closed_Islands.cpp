@@ -13,6 +13,7 @@ public:
         else
             return false;
     }
+
     bool flag;
     void dfs(int si,int sj,vector<vector<int>> &grid)
     {
@@ -29,12 +30,14 @@ public:
             }
         }
     }
+
     int closedIsland(vector<vector<int>> &grid)
     {
         memset(vis,false,sizeof(vis));
         n=grid.size();
         m=grid[0].size();
         int ans=0;
+        
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<m; j++)
@@ -43,6 +46,7 @@ public:
                 {
                     flag=true;
                     dfs(i,j,grid);
+                    
                     if(flag==true)
                     {
                         ans++;
