@@ -19,6 +19,7 @@ public:
         vis[si][sj]=true;
         if(grid1[si][sj]==0)
             flag=false;
+        
         for(int i=0; i<4; i++)
         {
             int ci=si+d[i].first;
@@ -35,6 +36,7 @@ public:
         n=grid2.size();
         m=grid2[0].size();
         int ans=0;
+        
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<m; j++)
@@ -48,6 +50,7 @@ public:
                 }
             }
         }
+        
         return ans;
     }
 };
