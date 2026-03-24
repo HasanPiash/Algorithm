@@ -19,6 +19,7 @@ int dsu_find(int node)
         return node;
     int leader=dsu_find(par[node]);
     par[node]=leader;
+    
     return leader;
 }
 void dsu_union(int node1,int node2)
@@ -31,14 +32,17 @@ void dsu_union_by_level(int node1,int node2)
 {
     int leaderA=dsu_find(node1);
     int leaderB=dsu_find(node2);
+    
     if(level[leaderA]>level[leaderB])
     {
         par[leaderB]=leaderA;
     }
+        
     else if(level[leaderB]>level[leaderA])
     {
         par[leaderA]=leaderB;
     }
+        
     else
     {
         par[leaderA]=leaderB;
@@ -49,11 +53,13 @@ void dsu_union_by_size(int node1,int node2)
 {
     int leaderA=dsu_find(node1);
     int leaderB=dsu_find(node2);
+    
     if(group_size[leaderA]>group_size[leaderB])
     {
         par[leaderB]=leaderA;
         group_size[leaderA]+=group_size[leaderB];
     }
+        
     else
     {
         par[leaderA]=leaderB;
@@ -70,5 +76,6 @@ int main()
     dsu_union_by_level(1,4);
     cout<<dsu_find(1)<<endl;
     cout<<dsu_find(4)<<endl;
+    
     return 0;
 }
