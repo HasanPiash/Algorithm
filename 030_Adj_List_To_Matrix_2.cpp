@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 void convert(int n,vector<pair<int,int>>adj[])
 {
     int mat[n][n];
