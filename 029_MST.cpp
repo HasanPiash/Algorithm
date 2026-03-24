@@ -3,6 +3,7 @@ using namespace std;
 const int N=1e5+5;
 int parent[N];
 int group_size[N];
+
 void dsu_initialize(int n)
 {
     for(int i=0; i<n; i++)
