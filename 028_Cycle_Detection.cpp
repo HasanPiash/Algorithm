@@ -17,17 +17,20 @@ int dsu_find(int node)
         return node;
     int leader=dsu_find(parent[node]);
     parent[node]=leader;
+    
     return leader;
 }
 void dsu_union_by_size(int node1,int node2)
 {
     int leaderA=dsu_find(node1);
     int leaderB=dsu_find(node2);
+    
     if(group_size[leaderA]>group_size[leaderB])
     {
         parent[leaderB]=leaderA;
         group_size[leaderA]+=group_size[leaderB];
     }
+        
     else
     {
         parent[leaderA]=leaderB;
@@ -40,12 +43,14 @@ int main()
     cin>>n>>e;
     dsu_initialize(n);
     bool cycle=false;
+    
     while(e--)
     {
         int a,b;
         cin>>a>>b;
         int leaderA=dsu_find(a);
         int leaderB=dsu_find(b);
+        
         if(leaderA==leaderB)
         {
             cycle=true;
