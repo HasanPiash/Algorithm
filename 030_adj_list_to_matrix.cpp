@@ -3,6 +3,7 @@ using namespace std;
 void convert(int n,vector<int>adj[])
 {
     int mat[n][n];
+    
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<n; j++)
@@ -12,6 +13,7 @@ void convert(int n,vector<int>adj[])
                 mat[i][j]=1;
         }
     }
+    
     for(int i=0; i<n; i++)
     {
         for(int child:adj[i])
@@ -19,6 +21,7 @@ void convert(int n,vector<int>adj[])
             mat[i][child]=1;
         }
     }
+    
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<n; j++)
@@ -28,11 +31,13 @@ void convert(int n,vector<int>adj[])
         cout<<endl;
     }
 }
+
 int main()
 {
     int n,e;
     cin>>n>>e;
     vector<int>v[n];
+    
     while(e--)
     {
         int a,b;
