@@ -5,6 +5,7 @@ int main()
     int n,e;
     cin>>n>>e;
     int mat[n][n];
+    
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<n; j++)
@@ -14,13 +15,16 @@ int main()
                 mat[i][j]=0;
         }
     }
+    
     while(e--)
     {
         int a,b,c;
         cin>>a>>b>>c;
+        
         mat[a][b]=c;
         mat[b][a]=c;
     }
+    
     for(int i = 0; i < n; i++)
     {
         for(int j=0; j<n; j++)
@@ -29,5 +33,6 @@ int main()
         }
         cout<<endl;
     }
+    
     return 0;
 }
