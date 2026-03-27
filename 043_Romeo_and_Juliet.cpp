@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+
 using namespace std;
 const int N=1e5+5;
 vector<int>v[N];
@@ -10,6 +11,7 @@ void bfs(int s)
     q.push(s);
     vis[s]=true;
     dis[s]=0;
+    
     while(!q.empty())
     {
         int par=q.front();
@@ -29,6 +31,7 @@ int main()
 {
     int n,e;
     cin>>n>>e;
+    
     while(e--)
     {
         int a,b;
@@ -41,6 +44,7 @@ int main()
     int src,d,k;
     cin>>src>>d>>k;
     bfs(src);
+    
     if(dis[d] !=-1 && dis[d]<=k*2)
         cout<<"YES"<<endl;
     else
