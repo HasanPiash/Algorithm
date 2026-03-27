@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+
 using namespace std;
 const int N=1e5+5;
 vector<int>v[N];
@@ -15,6 +16,7 @@ void bfs(int s)
     {
         int par=q.front();
         q.pop();
+        
         for(int child:v[par])
         {
             if (!vis[child])
@@ -31,6 +33,7 @@ int main()
 {
     int n,e;
     cin>>n>>e;
+    
     while(e--)
     {
         int a,b;
@@ -42,12 +45,14 @@ int main()
     memset(dis, -1,sizeof(dis));
     memset(parent, -1,sizeof(parent));
     bfs(1);
+    
     if(dis[n]==-1)
         cout<<"IMPOSSIBLE"<<endl;
     else
     {
         int x=n;
         vector<int>path;
+        
         while(x !=-1)
         {
             path.push_back(x);
@@ -55,6 +60,7 @@ int main()
         }
         reverse(path.begin(),path.end());
         cout<<path.size()<<endl;
+        
         for(int val:path)
             cout<<val<<" ";
         cout<<endl;
