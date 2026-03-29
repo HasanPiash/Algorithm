@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+
 using namespace std;
 const int N=1e5+5;
 long long prnt[N],grp_size[N];
@@ -17,6 +18,7 @@ int dsu_fnd(int node){
 void dsu_unn(int node1,int node2){
     int ldrA=dsu_fnd(node1);
     int ldrB=dsu_fnd(node2);
+    
     if(ldrA!=ldrB){
         if(grp_size[ldrA]>grp_size[ldrB]){
             prnt[ldrB]=ldrA;
@@ -46,6 +48,7 @@ int main(){
     cin>>N>>E;
     vector<Road>rdList;
     dsu_init(N);
+    
     for(int i=0; i<E; i++){
         int U,V;
         long long W;
@@ -55,9 +58,11 @@ int main(){
     sort(rdList.begin(),rdList.end(),cmp);
     long long ttlCost=0;
     int eUsed=0;
+    
     for(Road road:rdList){
         int ldrU=dsu_fnd(road.U);
         int ldrV=dsu_fnd(road.V);
+        
         if(ldrU !=ldrV){
             dsu_unn(road.U,road.V);
             ttlCost+=road.W;
