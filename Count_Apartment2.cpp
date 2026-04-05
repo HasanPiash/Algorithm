@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<bits/stdc++.h>   
 using namespace std;
 char A[1000][1000];
 bool vst[1000][1000];
@@ -12,6 +12,7 @@ bool valid(int i,int j){
 int dfs(int si,int sj){
     vst[si][sj]=true;
     int roomCount=1;
+    
     for(int i=0; i<4; i++){
         int ci=si+d[i].first;
         int cj=sj+d[i].second;
@@ -24,6 +25,7 @@ int dfs(int si,int sj){
 }
 int main(){
     cin>>N>>M;
+    
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
             cin>>A[i][j];
@@ -31,6 +33,7 @@ int main(){
     }
     memset(vst,false,sizeof(vst));
     vector<int>apartmentSizes;
+    
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
             if(A[i][j]=='.' && !vst[i][j]){
@@ -45,6 +48,7 @@ int main(){
     }
     else{
         sort(apartmentSizes.begin(),apartmentSizes.end());
+        
         for(int size:apartmentSizes)
         {
             cout<<size<<" ";
