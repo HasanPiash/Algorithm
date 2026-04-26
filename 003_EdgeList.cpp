@@ -5,6 +5,7 @@ int main()
     int N,E;
     cin>>N>>E;
     vector<pair<int,int>>V;
+    
     while (E--)
     {
         int A,B;
