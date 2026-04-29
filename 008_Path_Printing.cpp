@@ -10,6 +10,7 @@ void bfs(int src)
     q.push(src);
     vis[src]=true;
     level[src]=0;
+    
     while(!q.empty())
     {
         int par=q.front();
@@ -26,6 +27,7 @@ void bfs(int src)
         }
     }
 }
+
 int main()
 {
     int n,e;
@@ -45,6 +47,7 @@ int main()
     bfs(src);
     int x=des;
     vector<int>path;
+    
     while(x!=-1)
     {
         path.push_back(x);
