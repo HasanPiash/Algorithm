@@ -8,9 +8,9 @@ void bfs(int src,int des)
     Q.push({src,0});
     vis[src]=true;
     bool paisi=false;
-    
+       
     while(!Q.empty())
-    {
+    { 
         pair<int,int>P=Q.front();
         Q.pop();
         int par=P.first;
@@ -25,7 +25,7 @@ void bfs(int src,int des)
             if(vis[child]==false)
             {
                 Q.push({child,level+1});
-                vis[child]=true;
+                vis[child]=true;   
             }
         }
     }
