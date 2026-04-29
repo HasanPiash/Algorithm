@@ -7,6 +7,7 @@ void dfs(int src)
 {
     cout<<src<<endl;
     vis[src]=true;
+    
     for(int child:V[src])
     {
         if(vis[child]==false)
@@ -14,10 +15,12 @@ void dfs(int src)
     }
 }
 
+
 int main()
 {
     int N,E;
     cin>>N>>E;
+    
     while(E--)
     {
         int A,B;
@@ -25,6 +28,7 @@ int main()
         v[A].push_back(B);
         v[B].push_back(A);
     }
+        
     memset(vis,false,sizeof(vis));
     dfs(0);
     return 0;
