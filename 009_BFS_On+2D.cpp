@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<bits/stdc++.h>  
 using namespace std;    
 bool vis[20][20];
 int dis[20][20];
@@ -18,7 +18,7 @@ void bfs(int si,int sj)
     Q.push({si,sj});
     vis[si][sj]=true;
     dis[si][sj]=0;
-    
+        
     while(!Q.empty())
     {
         pair<int,int>par=Q.front();
@@ -28,6 +28,7 @@ void bfs(int si,int sj)
         {
             int ci=A+D[i].first;
             int cj=B+D[i].second;
+            
             if(valid(ci,cj)==true && vis[ci][cj]==false)
             {
                 Q.push({ci,cj});
@@ -38,6 +39,7 @@ void bfs(int si,int sj)
     }
 }
 
+   
 int main()
 {
     cin>>N>>M;
@@ -48,6 +50,7 @@ int main()
             cin>>A[i][j];
         }
     }
+    
     int si,sj;
     cin>>si>>sj;
     memset(vis,false,sizeof(vis));
