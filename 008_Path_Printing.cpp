@@ -10,11 +10,11 @@ void bfs(int src)
     q.push(src);
     vis[src]=true;
     level[src]=0;
-    
+        
     while(!q.empty())
     {
         int par=q.front();
-        q.pop();
+        q.pop();   
         for(int child:v[par])
         {
             if(vis[child]==false)
@@ -32,6 +32,7 @@ int main()
 {
     int n,e;
     cin>>n>>e;
+    
     while(e--)
     {
         int a,b;
@@ -47,12 +48,13 @@ int main()
     bfs(src);
     int x=des;
     vector<int>path;
-    
+       
     while(x!=-1)
     {
         path.push_back(x);
         x=parent[x];
     }
+    
     reverse(path.begin(),path.end());
     for(int val:path)
     {
