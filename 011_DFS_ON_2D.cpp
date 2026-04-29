@@ -3,8 +3,8 @@ using namespace std;
 char A[20][20];
 bool vis[20][20];
 vector<pair<int,int>>D={{0,1},{0,-1},{-1,0},{1,0}};
-int N,M;
-
+int N,M;   
+ 
 bool valid(int i, int j)
 {
     if(i<0 || i>=N || j<0 || j>=M)
@@ -12,6 +12,7 @@ bool valid(int i, int j)
     
     return true;
 }
+
 
 void dfs(int si,int sj)
 {
@@ -28,7 +29,7 @@ void dfs(int si,int sj)
         }
     }
 }
-
+   
 int main()
 {
     cin>>N>>M;
