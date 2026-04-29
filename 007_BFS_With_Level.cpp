@@ -9,7 +9,7 @@ void bfs(int src)
     q.push(src);
     vis[src]=true;
     level[src]=0;
-    
+        
     while(!q.empty())
     {
         int par=q.front();
@@ -25,11 +25,12 @@ void bfs(int src)
         }
     }
 }
-
+    
 int main()
 {
     int n,e;
     cin>>n>>e;
+       
     while(e--)
     {
         int a,b;
