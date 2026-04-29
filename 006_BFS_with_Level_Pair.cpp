@@ -8,6 +8,7 @@ void bfs(int src,int des)
     Q.push({src,0});
     vis[src]=true;
     bool paisi=false;
+    
     while(!Q.empty())
     {
         pair<int,int>P=Q.front();
@@ -33,6 +34,7 @@ void bfs(int src,int des)
         cout<<-1<<endl;
     }
 }
+
 int main()
 {
     int N,E;
