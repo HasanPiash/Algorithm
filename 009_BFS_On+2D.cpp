@@ -18,6 +18,7 @@ void bfs(int si,int sj)
     Q.push({si,sj});
     vis[si][sj]=true;
     dis[si][sj]=0;
+    
     while(!Q.empty())
     {
         pair<int,int>par=Q.front();
@@ -36,6 +37,7 @@ void bfs(int si,int sj)
         }
     }
 }
+
 int main()
 {
     cin>>N>>M;
