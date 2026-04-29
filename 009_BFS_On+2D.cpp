@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std;    
 bool vis[20][20];
 int dis[20][20];
 vector<pair<int,int>>D={{0, 1}, {0,-1}, {-1,0}, {1,0}};
