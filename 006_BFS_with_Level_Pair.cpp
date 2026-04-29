@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <bits/stdc++.h>      
 using namespace std;
 vector<int>V[1005];
 bool vis[1005]; 
@@ -20,6 +20,7 @@ void bfs(int src,int des)
             cout<<level<<endl;
             paisi=true;
         }
+        
         for(int child:V[par])
         {
             if(vis[child]==false)
@@ -39,6 +40,7 @@ int main()
 {
     int N,E;
     cin>>N>>E;
+    
     while(E--)
     {
         int A,B;
