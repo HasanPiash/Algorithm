@@ -10,17 +10,19 @@ void bfs(int s)
     queue<int>q;
     q.push(s);
     vis[s]=true;
-    
+          
     while(!q.empty())
     {
         int parent=q.front();
         q.pop();
+           
         for(int child:adj[parent])
         {
             if(vis[child]==true && parentArray[parent]!=child)
             {
                 ans=true;
             }
+            
             if(vis[child]==false)
             {
                 vis[child]=true;
@@ -54,6 +56,7 @@ int main()
             bfs(i);
         }
     }
+         
     if(ans)
     {
         cout<<"Cycle found";
