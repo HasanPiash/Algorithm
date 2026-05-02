@@ -8,13 +8,14 @@ void dijkstra(int src)
     queue<pair<int,int>>q;
     q.push({src,0});
     dis[src]=0;
-    
+        
     while(!q.empty())
     {
         pair<int,int>parent=q.front();
         q.pop();
         int node=parent.first;
         int cost=parent.second;
+           
         for(pair<int,int>child:v[node])
         {
             int childNode=child.first;
@@ -27,6 +28,7 @@ void dijkstra(int src)
         }
     }
 }
+
 
 int main()
 {
