@@ -7,14 +7,14 @@ int parentArray[N];
 bool ans;
 void dfs(int parent)
 {
-    vis[parent]=true;
+    vis[parent]=true;    
     for(int child:adj[parent])
     {
         if(vis[child]==true && child!=parentArray[parent])
         {
             ans=true;
         }
-        
+           
         if(vis[child]==false)
         {
             parentArray[child]=parent;
@@ -22,6 +22,7 @@ void dfs(int parent)
         }
     }
 }
+    
 int main()
 {
     int n,e;
@@ -37,7 +38,7 @@ int main()
     memset(vis,false,sizeof(vis));
     memset(parentArray,-1,sizeof(parentArray));
     ans=false;
-    
+      
     for(int i=0; i<n; i++)
     {
         if(!vis[i])
@@ -45,6 +46,7 @@ int main()
             dfs(i);
         }
     }
+    
     if(ans)
         cout<<"Cycle detected";
     else
