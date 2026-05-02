@@ -3,6 +3,7 @@ using namespace std;
 const int N=100;
 vector<pair<int,int>>v[N];
 int dis[N];
+   
 class cmp
 {
 public:
@@ -11,6 +12,8 @@ public:
         return a.second>b.second;
     }
 };
+
+
 void dijkstra(int src)
 {
     priority_queue<pair<int,int>,vector<pair<int,int>>,cmp>pq;
@@ -23,7 +26,7 @@ void dijkstra(int src)
         pq.pop();
         int node=parent.first;
         int cost=parent.second;
-        
+          
         for(pair<int,int>child:v[node])
         {
             int childNode=child.first;
@@ -36,6 +39,8 @@ void dijkstra(int src)
         }
     }
 }
+
+
 int main()
 {
     int n,e;
