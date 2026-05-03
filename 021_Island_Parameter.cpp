@@ -40,13 +40,14 @@ public:
             }
         }
     }
+
     int islandPerimeter(vector<vector<int>> &grid)
     {
         memset(vis,false,sizeof(vis));
         ans=0;
         n=grid.size();
         m=grid[0].size();
-        
+           
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<m; j++)
