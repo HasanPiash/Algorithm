@@ -11,6 +11,7 @@ public:
         this->c=c;
     }
 };
+   
 const int N=1e5+5;
 int dis[N];
 int main()
