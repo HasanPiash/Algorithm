@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+   
 class Edge
 {
 public:
@@ -11,6 +12,7 @@ public:
         this->c=c;
     }
 };
+
 const int N=1e5+5;
 int dis[N];
 int main()
