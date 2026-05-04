@@ -28,6 +28,8 @@ public:
             }
         }
     }
+
+ 
     int numIslands(vector<vector<char>> &grid)
     {
         n=grid.size();
@@ -46,7 +48,7 @@ public:
                 }
             }
         }
-        
+         
         return ans;
     }
-};
+}
