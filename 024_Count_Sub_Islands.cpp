@@ -13,6 +13,8 @@ public:
         else
             return false;
     }
+
+
     bool flag;
     void dfs(int si,int sj,vector<vector<int>> &grid1,vector<vector<int>> &grid2)
     {
@@ -30,6 +32,8 @@ public:
             }
         }
     }
+
+ 
     int countSubIslands(vector<vector<int>> &grid1,vector<vector<int>> &grid2)
     {
         memset(vis,false,sizeof(vis));
@@ -50,7 +54,7 @@ public:
                 }
             }
         }
-        
+         
         return ans;
     }
 };
