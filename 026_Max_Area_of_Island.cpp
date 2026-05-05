@@ -14,6 +14,8 @@ public:
         else
             return false;
     }
+
+
     void dfs(int si,int sj,vector<vector<int>> &grid)
     {
         vis[si][sj]=true;
@@ -23,13 +25,14 @@ public:
         {
             int ci=si+d[i].first;
             int cj=sj+d[i].second;
-            
+             
             if(valid(ci,cj) && !vis[ci][cj] && grid[ci][cj]==1)
             {
                 dfs(ci,cj,grid);
             }
         }
     }
+
     int maxAreaOfIsland(vector<vector<int>> &grid)
     {
         memset(vis,false,sizeof(vis));
