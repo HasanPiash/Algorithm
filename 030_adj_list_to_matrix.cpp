@@ -13,7 +13,7 @@ void convert(int n,vector<int>adj[])
                 mat[i][j]=1;
         }
     }
-    
+       
     for(int i=0; i<n; i++)
     {
         for(int child:adj[i])
@@ -21,7 +21,7 @@ void convert(int n,vector<int>adj[])
             mat[i][child]=1;
         }
     }
-    
+       
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<n; j++)
@@ -31,7 +31,7 @@ void convert(int n,vector<int>adj[])
         cout<<endl;
     }
 }
-
+   
 int main()
 {
     int n,e;
@@ -49,3 +49,5 @@ int main()
     
     return 0;
 }
+
+ 
