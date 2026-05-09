@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 const int N=1e5+5;
 int parent[N];
 int group_size[N];
 void dsu_initialize(int n)
+
 {
     for(int i=0; i<n; i++)
     {
@@ -32,6 +32,7 @@ void dsu_union_by_size(int node1,int node2)
         parent[leaderB]=leaderA;
         group_size[leaderA]+=group_size[leaderB];
     }
+        
     else
     {
         parent[leaderA]=leaderB;
@@ -49,6 +50,7 @@ public:
         this->w=w;
     }
 };
+
 bool cmp(Edge a,Edge b)
 {
     return a.w<b.w;
