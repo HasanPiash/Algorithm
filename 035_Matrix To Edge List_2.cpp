@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std;
+usin g namespace std;
 class Edge
 {
 public:
@@ -11,6 +11,7 @@ public:
         this->w=w;
     }
 };
+
 
 int main()
 {
@@ -37,10 +38,11 @@ int main()
             }
         }
     }
-    
+     
     for(Edge edge:edgeList)
     {
         cout<<edge.u<<" "<<edge.v<<" "<<edge.w<<endl;
     }
     return 0;
 }
+
