@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 #define ll long long
 #define pi pair<ll,ll>
 using namespace std;
@@ -7,6 +6,7 @@ const ll N=1e5+5;
 vector<pi>v[N];
 ll dis[N];
 ll par[N];
+
 class cmp
 {
 public:
@@ -15,19 +15,20 @@ public:
         return a.second>b.second;
     }
 };
+
 void dijkstra(ll s)
 {
     priority_queue<pi,vector<pi>,cmp>pq;
     pq.push({s,0});
     dis[s]=0;
-    
+       
     while(!pq.empty())
     {
         pi parent=pq.top();
         pq.pop();
         ll parentNode=parent.first;
         ll parentCost=parent.second;
-        
+           
         for(pi child:v[parentNode])
         {
             ll childNode=child.first;
@@ -42,6 +43,7 @@ void dijkstra(ll s)
         }
     }
 }
+
 int main()
 {
     ll n,e;
@@ -74,7 +76,7 @@ int main()
             x=par[x];
         }
         reverse(path.begin(),path.end());
-        
+           
         for(ll val:path)
             cout<<val<<" ";
         cout<<endl;
