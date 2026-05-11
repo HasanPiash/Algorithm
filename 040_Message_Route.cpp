@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 const int N=1e5+5;
 vector<int>v[N];
@@ -29,6 +28,7 @@ void bfs(int s)
         }
     }
 }
+
 int main()
 {
     int n,e;
@@ -65,5 +65,6 @@ int main()
             cout<<val<<" ";
         cout<<endl;
     }
+    
     return 0;
 }
