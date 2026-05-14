@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 const int N=1e5+5;
 vector<int>v[N];
@@ -11,7 +10,7 @@ void bfs(int s)
     q.push(s);
     vis[s]=true;
     dis[s]=0;
-    
+     
     while(!q.empty())
     {
         int par=q.front();
@@ -27,6 +26,7 @@ void bfs(int s)
         }
     }
 }
+
 int main()
 {
     int n,e;
@@ -39,6 +39,7 @@ int main()
         v[a].push_back(b);
         v[b].push_back(a);
     }
+    
     memset(vis,false,sizeof(vis));
     memset(dis, -1,sizeof(dis));
     int src,d,k;
