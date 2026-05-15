@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 const int N=105;
 vector<int>v[N];
@@ -36,6 +35,7 @@ void bfs(int s,int track)
         }
     }
 }
+
 int main()
 {
     int t;
@@ -54,6 +54,7 @@ int main()
             v[a].push_back(b);
             v[b].push_back(a);
         }
+        
         int s,d;
         cin>>s>>d;
         memset(vis, false,sizeof(false));
