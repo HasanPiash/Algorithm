@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 const int N=25;
 char a[N][N];
@@ -14,6 +13,7 @@ bool valid(int ci,int cj)
     else
         return false;
 }
+
 void dfs(int si,int sj)
 {
     vis[si][sj]=true;
@@ -30,6 +30,7 @@ void dfs(int si,int sj)
         }
     }
 }
+
 int main()
 {
     int t;
