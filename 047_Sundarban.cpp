@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 char a[50][50];
 bool vis[50][50];
@@ -13,6 +12,7 @@ bool valid(int ci,int cj)
     else
         return false;
 }
+
 void bfs(int si,int sj)
 {
     queue<pair<int,int>>q;
@@ -39,6 +39,7 @@ void bfs(int si,int sj)
         }
     }
 }
+
 int main()
 {
     d.push_back({0,1});
