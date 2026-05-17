@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 const int N=1e5+5;
 long long prnt[N];
@@ -10,12 +9,14 @@ void dsu_init(long long n){
         grp_size[i]=1;
     }
 }
+
 long long dsu_fnd(long long node){
     if(prnt[node]==-1)
         return node;
     prnt[node]=dsu_fnd(prnt[node]);
     return prnt[node];
 }
+
 void dsu_unnsize(long long node1,long long node2){
     long long ldrA=dsu_fnd(node1);
     long long ldrB=dsu_fnd(node2);
@@ -31,6 +32,7 @@ void dsu_unnsize(long long node1,long long node2){
         }
     }
 }
+
 class Building{
 public:
     long long U,V,W;
@@ -43,6 +45,7 @@ public:
 bool cmp(Building a,Building b){
     return a.W<b.W;
 }
+
 int main(){
     long long N,E;
     cin>>N>>E;
