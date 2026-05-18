@@ -10,6 +10,7 @@ int fact(int n)
     
     return chotoFactorial * n;
 }
+
 int main()
 {
     int n;
