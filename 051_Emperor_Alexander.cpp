@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 const int N=1e5+5;
 long long prnt[N],grp_size[N];
@@ -9,12 +8,14 @@ void dsu_init(int n){
         grp_size[i]=1;
     }
 }
+
 int dsu_fnd(int node){
     if(prnt[node]==-1)
         return node;
     prnt[node]=dsu_fnd(prnt[node]);
     return prnt[node];
 }
+
 void dsu_unn(int node1,int node2){
     int ldrA=dsu_fnd(node1);
     int ldrB=dsu_fnd(node2);
@@ -30,6 +31,7 @@ void dsu_unn(int node1,int node2){
         }
     }
 }
+
 class Road{
 public:
     int U,V;
@@ -43,6 +45,7 @@ public:
 bool cmp(Road a,Road b){
     return a.W<b.W;
 }
+
 int main(){
     int N,E;
     cin>>N>>E;
