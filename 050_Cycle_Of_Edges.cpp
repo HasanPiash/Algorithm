@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 class CycleEdges{
 public:
@@ -12,6 +11,7 @@ public:
             prnt[i]=i;
         }
     }
+
     int find(int x){
         if(prnt[x] !=x){
             prnt[x]=find(prnt[x]);
