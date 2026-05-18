@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-   
 #define ll long long
 using namespace std;
 const ll N=1e6+5;
@@ -19,6 +18,7 @@ ll fibo(ll n)
     
     return ans;
 }
+
 int main()
 {
     ll n;
