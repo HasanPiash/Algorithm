@@ -3,7 +3,7 @@ using namespace std;
 const int maxN=1000;
 const int maxW=1000;
 int dp[maxN][maxW];
-
+ 
 int knapsack(int n,int weight[],int value[],int W)
 {
     if(n==0 || W==0)
@@ -19,12 +19,14 @@ int knapsack(int n,int weight[],int value[],int W)
         
         return dp[n][W]=max(op1,op2);
     }
+        
     else
     {
         int op2=knapsack(n-1,weight,value,W);
         return dp[n][W]=op2;
     }
 }
+
 int main()
 {
     int n;
