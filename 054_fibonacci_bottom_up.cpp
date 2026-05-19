@@ -12,7 +12,7 @@ int main()
     {
         a[i]=a[i-1]+a[i-2];
     }
-    cout<<a[n]<<endl;
     
+    cout<<a[n]<<endl;
     return 0;
 }
