@@ -14,6 +14,7 @@ int main()
     {
         cin>>value[i];
     }
+    
     int W;
     cin>>W;
     int dp[n+1][W+1];   
@@ -44,6 +45,5 @@ int main()
         }
     }
     cout<<dp[n][W]<<endl;
-     
     return 0;
 }
