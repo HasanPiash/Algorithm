@@ -5,7 +5,7 @@ int main(){
     cin>>N>>E;
     vector<vector<int>>adj(N);
     vector<pair<int,int>>v;   
-    
+     
     while(E--){
         int a,b;
         cin>>a>>b;
@@ -14,9 +14,9 @@ int main(){
         adj[a].push_back(b);
         adj[b].push_back(a);
     }
+    
     int Q;
     cin>>Q;
-    
     while(Q--){
         int X;
         cin>>X;
@@ -24,6 +24,7 @@ int main(){
         if(adj[X].empty()){
             cout<<"-1\n";
         }
+            
         else{
             sort(adj[X].begin(),adj[X].end(),greater<int>());
             for(int node:adj[X]){
