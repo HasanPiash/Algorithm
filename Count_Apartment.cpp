@@ -12,6 +12,7 @@ bool valid(int i,int j){
     
     return true;
 }
+
 void bfs(int ci,int cj){
     queue<pair<int,int>>Q;
     Q.push({ci, cj});
@@ -32,17 +33,17 @@ void bfs(int ci,int cj){
         }
     }
 }
+
 int main(){
     cin>>N>>M;
-    
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
             cin>>A[i][j];
         }
     }
+    
     memset(vst,false,sizeof(vst));
     int apartmentCount=0;
-    
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
             if(A[i][j]=='.' && !vst[i][j]){
