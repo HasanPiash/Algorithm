@@ -4,7 +4,6 @@ int main(){
     int N,E;
     cin>>N>>E;
     int mat[N][N];
-    
     memset(mat, 0, sizeof(mat));
 
     while(E--){   
@@ -12,9 +11,9 @@ int main(){
         cin>>A>>B;
         mat[A][B]=1;
     }
+    
     int Q;
     cin>>Q;
-    
     while(Q--){
         int A,B;
         cin>>A>>B;
