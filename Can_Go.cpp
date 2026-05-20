@@ -31,6 +31,7 @@ bool bfs(int ci,int cj,int gi,int gj){
     }
     return false;
 }
+
 int main(){
     cin>>N>>M;
     int ci=-1, cj=-1, gi=-1, gj=-1;
