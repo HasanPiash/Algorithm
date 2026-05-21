@@ -9,6 +9,7 @@ bool valid(int i,int j){
     if(A[i][j]=='#')return false;
     return true;
 }
+
 int dfs(int si,int sj){
     vst[si][sj]=true;
     int roomCount=1;
@@ -23,6 +24,7 @@ int dfs(int si,int sj){
     }
     return roomCount;
 }
+
 int main(){
     cin>>N>>M;
     
