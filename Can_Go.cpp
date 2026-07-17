@@ -4,7 +4,6 @@ bool vst[1000][1000];
 vector<pair<int,int>>d={{0,1},{0,-1},{-1,0},{1,0}};
 int N,M;
 char A[1000][1000];
-
 bool valid(int i,int j){
     if(i<0 || i>=N || j<0 || j>=M)return false;
     if(A[i][j]=='#' || vst[i][j])return false;
@@ -48,6 +47,7 @@ int main(){
             }
         }
     }
+
     if(ci==-1 || cj==-1 || gi==-1 || gj==-1){
         cout<<"NO\n";
      
