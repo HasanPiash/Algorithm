@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 vector<pair<int,int>>d={{0,1},{0,-1},{-1,0},{1,0}};
-int N,M;   
+int N,M;
 char A[1000][1000];
 bool vst[1000][1000];
 bool valid(int i,int j){
@@ -9,7 +9,6 @@ bool valid(int i,int j){
         return false;
     if(A[i][j] =='#')
         return false;
-    
     return true;
 }
 
@@ -17,7 +16,6 @@ void bfs(int ci,int cj){
     queue<pair<int,int>>Q;
     Q.push({ci, cj});
     vst[ci][cj]=true;
-    
     while(!Q.empty()){
         pair<int,int> par=Q.front();
         int x=par.first, y=par.second;
