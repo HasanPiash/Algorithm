@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std; 
 int main(){
     int N,E;
-    cin>>N>>E;
+    cin>>N>>E; 
     vector<vector<int>>adj(N);
     vector<pair<int,int>>v;
     while(E--){
@@ -12,7 +12,6 @@ int main(){
         adj[a].push_back(b);
         adj[b].push_back(a);
     }
-    
     int Q;
     cin>>Q;
     while(Q--){
@@ -29,5 +28,5 @@ int main(){
             cout<<"\n";
         }
     }
-    return 0;
+    return 0; 
 }
