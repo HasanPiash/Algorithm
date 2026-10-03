@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-char A[1000][1000];
+char A[1000][1000]; 
 bool vst[1000][1000];
 vector<pair<int,int>>d={{0,1},{0,-1},{-1,0},{1,0}};
 int N,M;
@@ -9,7 +9,6 @@ bool valid(int i,int j){
     if(A[i][j]=='#')return false;
     return true;
 }
-
 int dfs(int si,int sj){
     vst[si][sj]=true;
     int roomCount=1;
@@ -31,8 +30,8 @@ int main(){
             cin>>A[i][j];
         }
     }
-    memset(vst,false,sizeof(vst));
-    vector<int>apartmentSizes;
+    memset(vst,false,sizeof(vst)); 
+    vector<int>apartmentSizes; 
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
             if(A[i][j]=='.' && !vst[i][j]){
@@ -52,7 +51,7 @@ int main(){
         {
             cout<<size<<" ";
         }
-        cout<<endl;
+        cout<<endl; 
     }
     return 0;
 }
