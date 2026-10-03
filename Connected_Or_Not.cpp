@@ -1,16 +1,16 @@
 #include <bits/stdc++.h>
-using namespace std;
+using namespace std; 
 int main(){
     int N,E;
     cin>>N>>E;
-    int mat[N][N];
+    int mat[N][N]; 
     memset(mat, 0, sizeof(mat));
     while(E--){   
         int A,B;
         cin>>A>>B;
         mat[A][B]=1;
     }
-    int Q;
+    int Q; 
     cin>>Q;
     while(Q--){
         int A,B;
