@@ -5,7 +5,6 @@ int main()
     int N,E;
     cin>>N>>E;
     vector<int> mat[N];
-    
     while (E--)
     {
         int A,B;
@@ -18,5 +17,5 @@ int main()
     {
         cout << mat[3][i] << " ";
     }
-    return 0;
+    return 0; 
 }
