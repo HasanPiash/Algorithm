@@ -6,7 +6,6 @@ int main()
     cin >>N>>E;
     int mat[N][N];
     memset(mat, 0, sizeof(mat));
-    
     while (E--)   
     {
         int A,B;
@@ -18,5 +17,5 @@ int main()
         cout<<"Connection";
     else
         cout<<"No Connection";
-    return 0;
+    return 0; 
 }
