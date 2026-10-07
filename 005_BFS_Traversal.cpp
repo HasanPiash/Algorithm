@@ -22,7 +22,6 @@ void bfs(int src)
         }
     }
 }
-
 int main()
 {
     int N,E;
@@ -34,9 +33,9 @@ int main()
         v[A].push_back(B);
         v[B].push_back(A);
     }
-    int src;
+    int src; 
     cin >> src;
     memset(vis, false, sizeof(vis));
-    bfs(src);
+    bfs(src); 
     return 0;
 }
