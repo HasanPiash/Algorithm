@@ -1,14 +1,13 @@
 #include <bits/stdc++.h>      
 using namespace std;
-vector<int>V[1005];
+vector<int>V[1005]; 
 bool vis[1005]; 
 void bfs(int src,int des)
 {
     queue<pair<int,int>>Q;
     Q.push({src,0});
     vis[src]=true;
-    bool paisi=false;
-       
+    bool paisi=false;   
     while(!Q.empty())
     { 
         pair<int,int>P=Q.front();
@@ -19,8 +18,7 @@ void bfs(int src,int des)
         {
             cout<<level<<endl;
             paisi=true;
-        }
-        
+        } 
         for(int child:V[par])
         {
             if(vis[child]==false)
@@ -35,12 +33,10 @@ void bfs(int src,int des)
         cout<<-1<<endl;
     }
 }
-
 int main()
 {
-    int N,E;
+    int N,E; 
     cin>>N>>E;
-    
     while(E--)
     {
         int A,B;
