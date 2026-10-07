@@ -5,7 +5,6 @@ int main()
     int N,E;
     cin>>N>>E;
     vector<pair<int,int>>V;
-    
     while (E--)
     {
         int A,B;
@@ -16,5 +15,5 @@ int main()
     {
         cout<<P.first<<" "<<P.second<<endl;
     }
-    return 0;
+    return 0; 
 }
