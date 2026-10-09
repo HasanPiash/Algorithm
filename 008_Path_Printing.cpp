@@ -9,8 +9,7 @@ void bfs(int src)
     queue<int>q;
     q.push(src);
     vis[src]=true;
-    level[src]=0;
-        
+    level[src]=0;    
     while(!q.empty())
     {
         int par=q.front();
@@ -27,12 +26,10 @@ void bfs(int src)
         }
     }
 }
-
 int main()
 {
     int n,e;
     cin>>n>>e;
-    
     while(e--)
     {
         int a,b;
@@ -47,18 +44,16 @@ int main()
     memset(parent,-1, sizeof(parent));
     bfs(src);
     int x=des;
-    vector<int>path;
-       
+    vector<int>path; 
     while(x!=-1)
     {
         path.push_back(x);
         x=parent[x];
     }
-    
     reverse(path.begin(),path.end());
     for(int val:path)
     {
         cout<<val<<" ";
     }
-    return 0;
+    return 0; 
 }
