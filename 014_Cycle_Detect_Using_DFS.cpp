@@ -2,7 +2,7 @@
 using namespace std;
 const int N=1e5+5;
 bool vis[N];
-vector<int>adj[N];
+vector<int>adj[N]; 
 int parentArray[N];
 bool ans;
 void dfs(int parent)
@@ -13,8 +13,7 @@ void dfs(int parent)
         if(vis[child]==true && child!=parentArray[parent])
         {
             ans=true;
-        }
-           
+        }    
         if(vis[child]==false)
         {
             parentArray[child]=parent;
@@ -27,7 +26,6 @@ int main()
 {
     int n,e;
     cin>>n>>e;
-    
     while(e--)
     {
         int a,b;
@@ -37,8 +35,7 @@ int main()
     }
     memset(vis,false,sizeof(vis));
     memset(parentArray,-1,sizeof(parentArray));
-    ans=false;
-      
+    ans=false;  
     for(int i=0; i<n; i++)
     {
         if(!vis[i])
@@ -46,7 +43,6 @@ int main()
             dfs(i);
         }
     }
-    
     if(ans)
         cout<<"Cycle detected";
     else
