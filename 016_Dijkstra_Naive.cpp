@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std; 
 const int N=100; 
 vector<pair<int,int>>v[N];
 int dis[N];
@@ -39,7 +39,7 @@ int main()
     }
     for(int i=0; i<n; i++)
     {
-        dis[i]=INT_MAX;
+        dis[i]=INT_MAX; 
     }
     dijkstra(0);
     for(int i=0; i<n; i++)
