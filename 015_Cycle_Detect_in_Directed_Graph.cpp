@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std; 
 const int N=1e5+5;
-bool vis[N];
+bool vis[N]; 
 bool pathVisit[N];
-vector<int>adj[N];
+vector<int>adj[N]; 
 bool ans;
 void dfs(int parent)
 {
