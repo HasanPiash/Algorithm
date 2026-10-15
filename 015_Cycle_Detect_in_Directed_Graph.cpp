@@ -15,7 +15,6 @@ void dfs(int parent)
         {
             ans=true;
         }
-        
         if(!vis[child])
         {
             dfs(child);
@@ -35,7 +34,7 @@ int main()
     }
     memset(vis,false,sizeof(vis));
     memset(pathVisit,false,sizeof(pathVisit));
-    ans=false;  
+    ans=false; 
     for(int i=0; i<n; i++)
     {
         if(!vis[i])
@@ -47,6 +46,5 @@ int main()
         cout<<"Cycle detected";
     else
         cout<<"Cycle not detected";
-    
-    return 0;
+    return 0; 
 }
