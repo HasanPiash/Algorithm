@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int N=100;
+const int N=100; 
 vector<pair<int,int>>v[N];
 int dis[N];  
 class cmp
@@ -10,7 +10,7 @@ public:
     {
         return a.second>b.second;
     }
-};
+}; 
 void dijkstra(int src)
 {
     priority_queue<pair<int,int>,vector<pair<int,int>>,cmp>pq;
