@@ -1,16 +1,16 @@
 #include<bits/stdc++.h>
-using namespace std; 
+using namespace std;  
 class Edge
 {
 public:
     int u,v,c; 
     Edge(int u,int v,int c)
     {
-        this->u=u;
+        this->u=u; 
         this->v=v;
         this->c=c;
     }
-};
+}; 
 const int N=1e5+5;
 int dis[N]; 
 int main()
