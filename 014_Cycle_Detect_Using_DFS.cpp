@@ -1,13 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int N=1e5+5;
+const int N=1e5+5; 
 bool vis[N];
-vector<int>adj[N]; 
+vector<int>adj[N];  
 int parentArray[N];
 bool ans;
 void dfs(int parent)
 {
-    vis[parent]=true;    
+    vis[parent]=true;     
     for(int child:adj[parent])
     {
         if(vis[child]==true && child!=parentArray[parent])
