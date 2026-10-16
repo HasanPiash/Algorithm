@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 #define ll long long int
-using namespace std; 
+using namespace std;
 int main()
 {
     ll n,e;
@@ -17,7 +17,7 @@ int main()
     }     
     while(e--)
     {
-        int a,b,c;
+        int a,b,c; 
         cin>>a>>b>>c;
         adj[a][b]=c; 
     } 
