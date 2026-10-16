@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
-using namespace std; 
+using namespace std;
 class Solution
 {
 public:
-    int n,m;
+    int n,m; 
     bool vis[105][105];
     vector<pair<int,int>>d={{0,1},{0,-1},{-1,0},{1,0}};
     bool valid(int ci,int cj)
@@ -29,10 +29,11 @@ public:
             }
         }
     }
+
     int closedIsland(vector<vector<int>> &grid)
     {
         memset(vis,false,sizeof(vis));
-        n=grid.size();
+        n=grid.size(); 
         m=grid[0].size();
         int ans=0;
         for(int i=0; i<n; i++)
@@ -51,6 +52,6 @@ public:
                 }
             }
         }
-        return ans;
+        return ans; 
     }
 };
