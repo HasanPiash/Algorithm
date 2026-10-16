@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std; 
 class Solution
 {
 public:
@@ -33,21 +33,18 @@ public:
             {
                 ans++;
             }
-            
             if(valid(ci,cj) && !vis[ci][cj] && grid[ci][cj]==1)
             {
                 dfs(ci,cj,grid);
             }
         }
     }
-
     int islandPerimeter(vector<vector<int>> &grid)
     {
         memset(vis,false,sizeof(vis));
         ans=0;
         n=grid.size();
-        m=grid[0].size();
-           
+        m=grid[0].size();  
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<m; j++)
@@ -58,6 +55,6 @@ public:
                 }
             }
         }
-        return ans;
+        return ans; 
     }
 };
