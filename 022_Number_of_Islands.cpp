@@ -1,8 +1,8 @@
  #include<bits/stdc++.h>
-using namespace std; 
+using namespace std;
 class Solution
 {
-public:
+public: 
     int n,m;
     bool vis[305][305];
     vector<pair<int,int>>d={{0,1},{0,-1},{-1,0},{1,0}};
@@ -26,12 +26,13 @@ public:
             }
         }
     }
+
     int numIslands(vector<vector<char>> &grid)
     {
         n=grid.size();
         m=grid[0].size();
         memset(vis,false,sizeof(vis));
-        int ans=0;  
+        int ans=0; 
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<m; j++)
