@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
-using namespace std; 
+using namespace std;
 class Solution
 {
-public:
+public: 
     bool vis[105][105];
     int ans;
     vector<pair<int,int>>d={{0,1},{0,-1},{-1,0},{1,0}};
@@ -10,20 +10,17 @@ public:
     bool valid(int ci,int cj)
     {
         if(ci>=0 && ci<n && cj >=0 && cj<m)
-            return true;
-            
+            return true;  
         else
-            return false;
+            return false; 
     }
     void dfs(int si,int sj,vector<vector<int>> &grid)
     {
         vis[si][sj]=true;
-        
         for(int i=0; i<4; i++)
         {
             int ci=si+d[i].first;
-            int cj=sj+d[i].second;
-            
+            int cj=sj+d[i].second; 
             if(valid(ci,cj))
             {
                 if(grid[ci][cj]==0)
@@ -55,6 +52,6 @@ public:
                 }
             }
         }
-        return ans; 
+        return ans;
     }
 };
