@@ -1,9 +1,8 @@
 #include<bits/stdc++.h>   
-using namespace std;   
+using namespace std;  
 void convert(int n,vector<int>adj[])
 {
-    int mat[n][n];   
-    
+    int mat[n][n];
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<n; j++)
@@ -12,16 +11,14 @@ void convert(int n,vector<int>adj[])
             if(i==j)
                 mat[i][j]=1;
         }
-    }
-       
+    }  
     for(int i=0; i<n; i++)
     {
         for(int child:adj[i])
         {
             mat[i][child]=1;
         }
-    }
-       
+    }  
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<n; j++)
@@ -36,8 +33,7 @@ int main()
 {
     int n,e;
     cin>>n>>e;
-    vector<int>v[n];
-    
+    vector<int>v[n]; 
     while(e--)
     {
         int a,b;
@@ -46,7 +42,6 @@ int main()
         v[b].push_back(a);
     }
     convert(n,v);
-    
     return 0;
 }
 
