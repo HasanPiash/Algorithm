@@ -4,8 +4,7 @@ int main()
 {
     int n;
     cin>>n;
-    int mat[n][n];
-       
+    int mat[n][n]; 
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<n; j++)
@@ -13,9 +12,7 @@ int main()
             cin>>mat[i][j];
         }
     }
-    
-    vector<pair<int,int>>edgeList;
-       
+    vector<pair<int,int>>edgeList; 
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<n; j++)
@@ -26,11 +23,9 @@ int main()
             }
         }
     }
-    
     for(pair<int,int>edge:edgeList)
     {
         cout<<edge.first<<" "<<edge.second<<endl;
     }
-    
-    return 0;
+    return 0; 
 }
