@@ -1,12 +1,11 @@
 #include<bits/stdc++.h>
 #define ll long long
 #define pi pair<ll,ll>
-using namespace std;
+using namespace std; 
 const ll N=1e5+5;
 vector<pi>v[N];
 ll dis[N];
 ll par[N];
-
 class cmp
 {
 public:
@@ -15,25 +14,21 @@ public:
         return a.second>b.second;
     }
 };
-
 void dijkstra(ll s)
 {
     priority_queue<pi,vector<pi>,cmp>pq;
     pq.push({s,0});
-    dis[s]=0;
-       
+    dis[s]=0;    
     while(!pq.empty())
     {
         pi parent=pq.top();
         pq.pop();
         ll parentNode=parent.first;
-        ll parentCost=parent.second;
-           
+        ll parentCost=parent.second;   
         for(pi child:v[parentNode])
         {
             ll childNode=child.first;
             ll childCost=child.second;
-            
             if(parentCost+childCost<dis[childNode])
             {
                 dis[childNode]=parentCost+childCost;
@@ -43,12 +38,10 @@ void dijkstra(ll s)
         }
     }
 }
-
 int main()
 {
     ll n,e;
     cin>>n>>e;
-    
     while(e--)
     {
         ll a,b,c;
@@ -62,21 +55,18 @@ int main()
         par[i]=-1;
     }
     dijkstra(1);
-    
     if(dis[n]==1e18)
         cout<<-1<<endl;
     else
     {
         ll x=n;
-        vector<ll>path;
-        
+        vector<ll>path; 
         while(x !=-1)
         {
             path.push_back(x);
             x=par[x];
         }
-        reverse(path.begin(),path.end());
-           
+        reverse(path.begin(),path.end());  
         for(ll val:path)
             cout<<val<<" ";
         cout<<endl;
