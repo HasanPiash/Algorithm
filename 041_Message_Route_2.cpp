@@ -1,15 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 const int N=1e5+5;
-vector<int>v[N];
+vector<int>v[N]; 
 bool vis[N];
 int parent[N];
 void bfs(int s)
 {
     queue<int>q;
     q.push(s);
-    vis[s]=true;
-       
+    vis[s]=true; 
     while(!q.empty())
     {
         int par=q.front();
@@ -25,12 +24,10 @@ void bfs(int s)
         }
     }
 }
-
 int main()
 {
     int n,e;
-    cin>>n>>e;
-    
+    cin>>n>>e; 
     while(e--)
     {
         int a,b;
@@ -38,20 +35,17 @@ int main()
         v[a].push_back(b);
         v[b].push_back(a);
     }
-    
     memset(vis,false,sizeof(vis));
     memset(parent, -1,sizeof(parent));
     bfs(1);
     int x=n;
-    vector<int>path;
-    
+    vector<int>path; 
     while(x !=-1)
     {
         path.push_back(x);
         x=parent[x];
     }
     reverse(path.begin(),path.end());
-    
     if(path.size()==1)
         cout<<"IMPOSSIBLE"<<endl;
     else
@@ -62,4 +56,4 @@ int main()
         cout<<endl;
     }
     return 0;
-}
+} 
