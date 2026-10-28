@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int N=1e5+5;
+const int N=1e5+5; 
 vector<int>v[N];
 bool vis[N];
 int dis[N];
@@ -9,8 +9,7 @@ void bfs(int s)
     queue<int>q;
     q.push(s);
     vis[s]=true;
-    dis[s]=0;
-     
+    dis[s]=0; 
     while(!q.empty())
     {
         int par=q.front();
@@ -26,12 +25,10 @@ void bfs(int s)
         }
     }
 }
-
 int main()
 {
     int n,e;
     cin>>n>>e;
-    
     while(e--)
     {
         int a,b;
@@ -39,13 +36,11 @@ int main()
         v[a].push_back(b);
         v[b].push_back(a);
     }
-    
     memset(vis,false,sizeof(vis));
     memset(dis, -1,sizeof(dis));
     int src,d,k;
     cin>>src>>d>>k;
     bfs(src);
-    
     if(dis[d] !=-1 && dis[d]<=k*2)
         cout<<"YES"<<endl;
     else
