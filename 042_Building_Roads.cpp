@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std; 
 const int N=1e5+5; 
-int parent[N];
+int parent[N]; 
 int group_size[N];
 void dsu_initialize(int n)
 {
@@ -34,6 +34,7 @@ void dsu_union_by_size(int node1,int node2)
         group_size[leaderB] +=group_size[leaderA];
     }
 }
+
 int main()
 {
     int n,e;
