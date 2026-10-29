@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std; 
 const int N=1e5+5;
 int parent[N];
 int group_size[N];
@@ -11,22 +11,18 @@ void dsu_initialize(int n)
         group_size[i]=1;
     }
 }
-
 int dsu_find(int node)
 {
     if(parent[node]==-1)
         return node;
     int leader=dsu_find(parent[node]);
     parent[node]=leader;
-    
     return leader;
 }
-
 void dsu_union_by_size(int node1,int node2)
 {
     int leaderA=dsu_find(node1);
     int leaderB=dsu_find(node2);
-    
     if(group_size[leaderA]>group_size[leaderB])
     {
         parent[leaderB]=leaderA;
@@ -45,8 +41,7 @@ int main()
     cin>>n;
     dsu_initialize(n);
     vector<pair<int,int>>bad;
-    vector<pair<int,int>>create;
-    
+    vector<pair<int,int>>create; 
     for(int i=1; i<=n-1; i++)
     {
         int a,b;
@@ -63,7 +58,6 @@ int main()
         }
     }
     cout<<bad.size()<<endl;
-    
     for(int i=2; i<=n; i++)
     {
         int leaderA=dsu_find(1);
