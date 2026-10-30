@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std; 
 char a[50][50];
 bool vis[50][50];
 int dis[50][50];
@@ -12,24 +12,20 @@ bool valid(int ci,int cj)
     else
         return false;
 }
-
 void bfs(int si,int sj)
 {
     queue<pair<int,int>>q;
     q.push({si,sj});
     dis[si][sj]=0;
     vis[si][sj]=true;
-    
     while(!q.empty())
     {
         pair<int,int>par=q.front();
         q.pop();
-        
         for(int i=0; i<4; i++)
         {
             int ci=par.first+d[i].first;
             int cj=par.second+d[i].second;
-            
             if(valid(ci,cj) && !vis[ci][cj] && a[ci][cj] !='T')
             {
                 q.push({ci,cj});
@@ -46,7 +42,6 @@ int main()
     d.push_back({0,-1});
     d.push_back({-1,0});
     d.push_back({1,0});
-    
     while(cin>>n)
     {
         int si,sj;
@@ -55,8 +50,7 @@ int main()
         {
             for(int j=0; j<n; j++)
             {
-                cin>>a[i][j];
-                
+                cin>>a[i][j]; 
                 if(a[i][j]=='S')
                 {
                     si=i;
@@ -74,5 +68,5 @@ int main()
         bfs(si,sj);
         cout<<dis[di][dj]<<endl;
     }
-    return 0;
+    return 0; 
 }
