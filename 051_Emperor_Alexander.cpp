@@ -8,18 +8,15 @@ void dsu_init(int n){
         grp_size[i]=1;
     }
 }
-
 int dsu_fnd(int node){
     if(prnt[node]==-1)
         return node;
     prnt[node]=dsu_fnd(prnt[node]);
     return prnt[node];
 }
-
 void dsu_unn(int node1,int node2){
     int ldrA=dsu_fnd(node1);
-    int ldrB=dsu_fnd(node2);
-    
+    int ldrB=dsu_fnd(node2); 
     if(ldrA!=ldrB){
         if(grp_size[ldrA]>grp_size[ldrB]){
             prnt[ldrB]=ldrA;
@@ -31,7 +28,6 @@ void dsu_unn(int node1,int node2){
         }
     }
 }
-
 class Road{
 public:
     int U,V;
@@ -45,13 +41,11 @@ public:
 bool cmp(Road a,Road b){
     return a.W<b.W;
 }
-
 int main(){
     int N,E;
     cin>>N>>E;
     vector<Road>rdList;
-    dsu_init(N);
-    
+    dsu_init(N); 
     for(int i=0; i<E; i++){
         int U,V;
         long long W;
@@ -60,12 +54,10 @@ int main(){
     }
     sort(rdList.begin(),rdList.end(),cmp);
     long long ttlCost=0;
-    int eUsed=0;
-    
+    int eUsed=0; 
     for(Road road:rdList){
         int ldrU=dsu_fnd(road.U);
-        int ldrV=dsu_fnd(road.V);
-        
+        int ldrV=dsu_fnd(road.V); 
         if(ldrU !=ldrV){
             dsu_unn(road.U,road.V);
             ttlCost+=road.W;
