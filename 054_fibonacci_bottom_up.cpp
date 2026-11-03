@@ -2,7 +2,7 @@
 using namespace std; 
 int main()
 {
-    int n;
+    int n; 
     cin>>n;
     int a[n];
     a[0]=0;
@@ -11,6 +11,6 @@ int main()
     {
         a[i]=a[i-1]+a[i-2];
     }
-    cout<<a[n]<<endl;
+    cout<<a[n]<<endl; 
     return 0; 
 }
