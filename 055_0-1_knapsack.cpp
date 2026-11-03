@@ -1,12 +1,10 @@
 #include<bits/stdc++.h>
-using namespace std;
- 
+using namespace std; 
 /*
 Weight: 2 3 4 5
 Value: 1 3 5 3
 Limitation: 8Kg
 */
-
 int knapsack(int n,int weight[],int value[],int W)
 {
     if(n==0 || W==0)
@@ -15,8 +13,7 @@ int knapsack(int n,int weight[],int value[],int W)
     {
         int op1=knapsack(n-1,weight,value,W-weight[n-1])+value[n-1];
         int op2=knapsack(n-1,weight,value,W);
-        
-        return max(op1,op2);
+        return max(op1,op2); 
     }
     else
     {
@@ -24,13 +21,11 @@ int knapsack(int n,int weight[],int value[],int W)
         return op2;
     }
 }
-
 int main()
 {
     int n;
     cin>>n;
     int weight[n],value[n];
-    
     for(int i=0; i<n; i++)  
     {
         cin>>weight[i];
@@ -41,7 +36,6 @@ int main()
     }
     int W;
     cin>>W;
-    cout<<knapsack(n,weight,value,W)<<endl;
-    
+    cout<<knapsack(n,weight,value,W)<<endl; 
     return 0;
 }
