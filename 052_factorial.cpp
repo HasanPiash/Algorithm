@@ -10,7 +10,6 @@ int fact(int n)
     
     return chotoFactorial * n;
 }
-
 int main()
 {
     int n;
@@ -19,9 +18,8 @@ int main()
     
     for(int i=1; i<=n; i++)
     {
-        ans *=i;
+        ans *=i; 
     }
-    cout<<ans<<endl;
-    
+    cout<<ans<<endl; 
     return 0;
 }
