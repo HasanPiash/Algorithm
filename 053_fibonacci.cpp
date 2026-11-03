@@ -16,15 +16,13 @@ ll fibo(ll n)
     ll ans=fibo(n-1)+fibo(n-2);
     dp[n]=ans;
     
-    return ans;
+    return ans; 
 }
-
 int main()
 {
     ll n;
     cin>>n;
     memset(dp,-1,sizeof(dp));
     cout<<fibo(n)<<endl;
-    
     return 0;
 }
