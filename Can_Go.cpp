@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool vst[1000][1000]; 
+bool vst[1000][1000];
 vector<pair<int,int>>d={{0,1},{0,-1},{-1,0},{1,0}};
 int N,M;
 char A[1000][1000];
@@ -20,7 +20,7 @@ bool bfs(int ci,int cj,int gi,int gj){
         if(x==gi && y==gj)return true;
         for(int i=0; i<4; i++){
             int nx=x+d[i].first;
-            int ny=y+d[i].second;
+            int ny=y+d[i].second; 
             if (valid(nx,ny)){
                 Q.push({nx,ny});
                 vst[nx][ny]=true;
@@ -29,6 +29,7 @@ bool bfs(int ci,int cj,int gi,int gj){
     }
     return false; 
 }
+
 int main(){
     cin>>N>>M;
     int ci=-1, cj=-1, gi=-1, gj=-1;
