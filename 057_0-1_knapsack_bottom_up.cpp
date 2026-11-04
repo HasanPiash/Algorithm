@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int n;
+    int n; 
     cin>>n;
     int weight[n],value[n]; 
     for(int i=0; i<n; i++)
@@ -13,6 +13,7 @@ int main()
     {
         cin>>value[i];
     }
+    
     int W;
     cin>>W;
     int dp[n+1][W+1];
@@ -21,7 +22,7 @@ int main()
         for(int j=0; j<=W; j++)
         {
             if(i==0 || j==0)
-                dp[i][j]=0;
+                dp[i][j]=0; 
         }
     }
     for(int i=1; i<=n; i++)
