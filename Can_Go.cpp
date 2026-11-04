@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
-using namespace std; 
-bool vst[1000][1000];
+using namespace std;
+bool vst[1000][1000]; 
 vector<pair<int,int>>d={{0,1},{0,-1},{-1,0},{1,0}};
 int N,M;
 char A[1000][1000];
@@ -27,9 +27,8 @@ bool bfs(int ci,int cj,int gi,int gj){
             }
         }
     }
-    return false;
+    return false; 
 }
-
 int main(){
     cin>>N>>M;
     int ci=-1, cj=-1, gi=-1, gj=-1;
@@ -57,4 +56,4 @@ int main(){
     else{
         cout<<"NO\n";
     }
-    return 0;
+    return 0; 
