@@ -10,7 +10,7 @@ int main(){
         cin>>A>>B;
         mat[A][B]=1;
     }
-    int Q; 
+    int Q;  
     cin>>Q;
     while(Q--){
         int A,B;
@@ -20,7 +20,7 @@ int main(){
         else if(mat[A][B]==1)
             cout<<"YES\n";
         else
-            cout<<"NO\n";
+            cout<<"NO\n"; 
     }
-    return 0;
+    return 0; 
 }
