@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-using namespace std; 
+using namespace std;
 int main(){
     int N,E;
     cin>>N>>E;
@@ -10,11 +10,12 @@ int main(){
         cin>>A>>B;
         mat[A][B]=1;
     }
+    
     int Q;  
     cin>>Q;
     while(Q--){
         int A,B;
-        cin>>A>>B;
+        cin>>A>>B; 
         if(A==B)
             cout<<"YES\n";
         else if(mat[A][B]==1)
