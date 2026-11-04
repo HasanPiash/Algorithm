@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std; 
+using namespace std;
 int main(){
     int N,E; 
     cin>>N>>E; 
@@ -12,6 +12,7 @@ int main(){
         adj[a].push_back(b);
         adj[b].push_back(a);
     }
+    
     int Q;
     cin>>Q;
     while(Q--){
@@ -25,7 +26,7 @@ int main(){
             for(int node:adj[X]){
                 cout<<node<<" ";
             }
-            cout<<"\n"; 
+            cout<<"\n";
         }
     }
     return 0; 
