@@ -4,8 +4,7 @@ int main()
 {
     int n;
     cin>>n;
-    int weight[n],value[n];
-    
+    int weight[n],value[n]; 
     for(int i=0; i<n; i++)
     {
         cin>>weight[i];
@@ -14,11 +13,9 @@ int main()
     {
         cin>>value[i];
     }
-    
     int W;
     cin>>W;
-    int dp[n+1][W+1];   
-    
+    int dp[n+1][W+1];
     for(int i=0; i<=n; i++)
     {
         for(int j=0; j<=W; j++)
@@ -45,5 +42,5 @@ int main()
         }
     }
     cout<<dp[n][W]<<endl;
-    return 0;
+    return 0; 
 }
