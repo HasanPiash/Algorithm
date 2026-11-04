@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std; 
 int main(){
-    int N,E;
+    int N,E; 
     cin>>N>>E; 
     vector<vector<int>>adj(N);
     vector<pair<int,int>>v;
@@ -25,7 +25,7 @@ int main(){
             for(int node:adj[X]){
                 cout<<node<<" ";
             }
-            cout<<"\n";
+            cout<<"\n"; 
         }
     }
     return 0; 
