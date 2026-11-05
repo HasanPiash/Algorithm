@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-char A[1000][1000]; 
+char A[1000][1000];
 bool vst[1000][1000];
 vector<pair<int,int>>d={{0,1},{0,-1},{-1,0},{1,0}};
 int N,M;
@@ -11,7 +11,7 @@ bool valid(int i,int j){
 }
 int dfs(int si,int sj){
     vst[si][sj]=true;
-    int roomCount=1;
+    int roomCount=1; 
     for(int i=0; i<4; i++){
         int ci=si+d[i].first;
         int cj=sj+d[i].second;
@@ -22,7 +22,6 @@ int dfs(int si,int sj){
     }
     return roomCount;
 }
-
 int main(){
     cin>>N>>M;
     for(int i=0; i<N; i++){
@@ -42,7 +41,7 @@ int main(){
     }
     if(apartmentSizes.empty())
     {
-        cout<<0<<endl;
+        cout<<0<<endl; 
     }
     else{
         sort(apartmentSizes.begin(),apartmentSizes.end());
@@ -51,7 +50,7 @@ int main(){
         {
             cout<<size<<" ";
         }
-        cout<<endl; 
+        cout<<endl;
     }
     return 0;
 }
