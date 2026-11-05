@@ -22,15 +22,16 @@ int dfs(int si,int sj){
     }
     return roomCount;
 }
+
 int main(){
-    cin>>N>>M;
+    cin>>N>>M; 
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
             cin>>A[i][j];
         }
     }
     memset(vst,false,sizeof(vst)); 
-    vector<int>apartmentSizes; 
+    vector<int>apartmentSizes;
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
             if(A[i][j]=='.' && !vst[i][j]){
