@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std; 
 vector<pair<int,int>>d={{0,1},{0,-1},{-1,0},{1,0}};
-int N,M;
+int N,M; 
 char A[1000][1000];
 bool vst[1000][1000];
 bool valid(int i,int j){
@@ -29,9 +29,8 @@ void bfs(int ci,int cj){
         }
     }
 }
-
 int main(){
-    cin>>N>>M;
+    cin>>N>>M; 
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
             cin>>A[i][j];
@@ -48,5 +47,5 @@ int main(){
         }
     }
     cout<<apartmentCount<<endl;
-    return 0;
+    return 0; 
 }
