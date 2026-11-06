@@ -22,9 +22,8 @@ int dfs(int si,int sj){
     }
     return roomCount;
 }
-
 int main(){
-    cin>>N>>M; 
+    cin>>N>>M;  
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
             cin>>A[i][j];
@@ -42,7 +41,7 @@ int main(){
     }
     if(apartmentSizes.empty())
     {
-        cout<<0<<endl; 
+        cout<<0<<endl;
     }
     else{
         sort(apartmentSizes.begin(),apartmentSizes.end());
@@ -53,5 +52,5 @@ int main(){
         }
         cout<<endl;
     }
-    return 0;
+    return 0; 
 }
